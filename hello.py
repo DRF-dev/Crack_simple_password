@@ -15,7 +15,10 @@ def alea():
     for i in range(len(mdp)):
         while mdp[i] != caract_suivant:
             print(result + caract_suivant)
-            caract_suivant = random.choice(letters)
+            # caract_suivant = random.choice(letters)
+            for letter in letters:
+                if letter == mdp[i]:
+                    caract_suivant = letter
         result += caract_suivant
     return result
 
