@@ -4,7 +4,6 @@ import random
 import time
 import string
 
-
 mdp = input("Insérer ici un mot de passe à cracker : ")
 
 
@@ -15,12 +14,12 @@ def alea():
     result = ""
     for i in range(len(mdp)):
         while mdp[i] != caract_suivant:
-            print(result+caract_suivant)
+            print(result + caract_suivant)
             caract_suivant = random.choice(letters)
         result += caract_suivant
     return result
 
+
 debut_crack = time.time()
 res = alea()
-print("Mot de passe trouvé : ", res, " trouvé en ", time.time()-debut_crack," secondes")
-
+print("Mot de passe trouvé : ", res, " trouvé en ", time.time() - debut_crack, " secondes")
